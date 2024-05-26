@@ -13,7 +13,10 @@ sklearn
 skicit-learn
 # How to run :
 Step 1 : "rainfall in india 1901-2015" file contains the historical dataset.<br>
-Step 2 : Templates folder contains the html which are used in the flask application.Step 3 : Static folder contains the css file which is used for the html and also contains images and audio file.Step 4 : Run the app.py file Step 5 : It will give the IP which is to be pasted in the browser renders our flask application.
+Step 2 : Templates folder contains the html which are used in the flask application.<br>
+Step 3 : Static folder contains the css file which is used for the html and also contains images and audio file.<br>
+Step 4 : Run the app.py file.<br>
+Step 5 : It will give the IP which is to be pasted in the browser renders our flask application.<br>
 # Output
 ![image](https://github.com/VishnuHarish27/Rainfall-Prediction-And-Flood-Alert-System/assets/138471302/e0c520c7-10d5-4ce8-8aa8-d11d314bc4c1 "title-1") 
 
