@@ -5,12 +5,12 @@ rainfall prediction and flood management by employing machine learning methods. 
 # Architecture 
 ![image](https://github.com/VishnuHarish27/Rainfall-Prediction-And-Flood-Alert-System/assets/138471302/f61f7273-cc05-4fbc-b4f6-78f3d640752c)
 # Requirements
-Python>=3.8
-flask
-numpy
-pandas
-sklearn
-skicit-learn
+Python>=3.8<br>
+flask<br>
+numpy<br>
+pandas<br>
+sklearn<br>
+skicit-learn<br>
 # How to run :
 Step 1 : "rainfall in india 1901-2015" file contains the historical dataset.<br>
 Step 2 : Templates folder contains the html which are used in the flask application.<br>
