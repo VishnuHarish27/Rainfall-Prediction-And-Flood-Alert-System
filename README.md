@@ -18,6 +18,7 @@ Step 3 : Static folder contains the css file which is used for the html and also
 Step 4 : Run the app.py file 
 Step 5 : It will give the IP which is to be pasted in the browser renders our flask application.
 # Output
+![alt-text-1](https://github.com/VishnuHarish27/Rainfall-Prediction-And-Flood-Alert-System/assets/138471302/e0c520c7-10d5-4ce8-8aa8-d11d314bc4c1 "title-1") ![alt-text-2]([image2.png](https://github.com/VishnuHarish27/Rainfall-Prediction-And-Flood-Alert-System/assets/138471302/f1a5e4f5-417d-41d2-bd79-15135c82225e) "title-2")
 ![image](https://github.com/VishnuHarish27/Rainfall-Prediction-And-Flood-Alert-System/assets/138471302/e0c520c7-10d5-4ce8-8aa8-d11d314bc4c1)
 ![image](https://github.com/VishnuHarish27/Rainfall-Prediction-And-Flood-Alert-System/assets/138471302/f1a5e4f5-417d-41d2-bd79-15135c82225e)
 
