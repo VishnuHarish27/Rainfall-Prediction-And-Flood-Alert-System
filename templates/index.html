@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction and alert</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/R1.jpg') }}">
+	<audio id="beep-sound" src="{{ url_for('static', filename='audio/beep.mp3') }}"></audio>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <h1 class="logo"></h1>
+    
+          <nav>
+            <ul>
+              <li><a href="#" ><h3>welcome to my rainfall prediction and flood alert system</h3></a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Prediction</a></li>
+              <li><a href="#">alert</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+    <form id="prediction-form">
+        <table>
+            <tr>
+                <td>Enter Month:</td>
+                <td> <input id="month-input" type="number" placeholder="Enter Month"></td>
+            </tr>
+            <tr>
+                <td>Enter Year:</td>
+                <td> <input id="year-input" type="number" placeholder="Enter Year"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Predict rainfall</button></td>
+            </tr>
+        </table>
+    </form>
+<div id="prediction-result">
+    <p id="rainfall-prediction"></p>
+    <p id="flood-alert"></p>
+</div>
+
+<div class="one">
+        <p>The Intelligent Rainfall Prediction and Flood Alert System utilizes machine learning algorithms to predict rainfall patterns. It analyzes historical rainfall data along with meteorological parameters to train the model. The system continuously monitors current weather conditions and predicts future rainfall. If the predicted rainfall exceeds a certain threshold, the system triggers a flood alert. The model's accuracy improves over time as it learns from new data. This system helps authorities and communities prepare for potential floods by providing timely alerts and aiding in decision-making processes related to disaster management.</p>
+    </div><br>
+
+    <div class="her">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Tamil_Nadu"> 
+	<img src="{{ url_for('static', filename='img/tamilnadu.png') }}">
+</a><br><br><br><br>
+    </div>
+    <div class="product1">
+        <div class="box">
+            <img src="{{ url_for('static', filename='img/Figure_1.png') }}">
+            <p>ANNUAL RAINFALL V/S SUBDIVISION</p>
+        </div>
+        <div class="box">
+            <img src="{{ url_for('static', filename='img/Figure_2.png') }}">
+            <p>YEAR V/S RAINFALL IN EACH MONTH</p>
+        </div>
+        <div class="box">
+            <img src="{{ url_for('static', filename='img/Figure_3.png') }}">
+            <P>RAINFALL OVER YEARS</P>
+        </div>
+        <div class="box">
+           <img src="{{ url_for('static', filename='img/Figure_4.png') }}">
+            <P>RAINFALL IN MM AND YEAR</P>
+        </div>
+        <div class="box">
+            <img src="{{ url_for('static', filename='img/Figure_5.png') }}">
+            <P>SUBDIVISION V/S RAINFALL IN EACH MONTH</P>
+        </div>   
+    </div>
+    <div class="product2">
+        <div class="box1">
+            <img src="{{ url_for('static', filename='img/Figure_6.png') }}">
+            <P>STATES AND RAINFALL IN MM</P>
+        </div> 
+        <div class="box1">
+            <img src="{{ url_for('static', filename='img/Figure_8.png') }}">
+            <P>TAMIL NADU RAINFALL V/S MONTHS</P>
+        </div>
+        <div class="box1">
+            <img src="{{ url_for('static', filename='img/Figure_9.png') }}">
+            <P>TAMIL NADU RAINFALL FROM YEAR 1901 TO 2015</P>
+        </div>
+        <div class="box1">
+            <img src="{{ url_for('static', filename='img/Figure_10.png') }}">
+            <p>CORELATION</p>
+        </div>
+        <div class="box1">
+            <img src="{{ url_for('static', filename='img/R.jpg') }}">
+           
+        </div>
+    </div><br>
+
+
+
+
+
+    
+    <footer class="footer">
+        <div class="footer-content">
+                <h4>Developed by</h4>
+                <p>
+                    Harish Vishnu K<br>
+                    Contact Details:<br>
+                    Email: vishnuharish2704@gmail.com<br>
+                    Phone: 7010771400
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#prediction-form').submit(function(event) {
+        event.preventDefault();
+        var month = $('#month-input').val();
+        var year = $('#year-input').val();
+
+        $.ajax({
+            type: 'POST',
+            url: '/predict',
+            contentType: 'application/json',
+            data: JSON.stringify({ month: month, year: year }),
+            success: function(response) {
+                var predictionMessage = 'Predicted rainfall: ' + response.predicted_rainfall ;
+                var floodAlertMessage = response.flood_alert;
+
+                // Display predicted rainfall and flood alert in dialog box
+                alert(predictionMessage + '\n\n' + floodAlertMessage);
+
+                // Check if flood alert and play beep sound
+                if (floodAlertMessage.includes('Flood Alert')) {
+                    document.getElementById('beep-sound').play();
+                }
+            },
+            error: function() {
+                $('#prediction-result').text('Error predicting rainfall.');
+            }
+        });
+    });
+});
+
+
+</script>

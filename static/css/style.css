@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+	margin: 0;
+	background: white;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: rgb(58, 57, 57);
+  
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+}
+
+nav {
+  float: right;
+}
+
+
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: whitesmoke;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: whitesmoke;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+form {
+    margin: 0 auto;
+    max-width: 500px;
+    height: 200px;
+    margin-top: 65px;
+    margin-left: 5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+input[type="number"],
+button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+
+}
+
+button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.her img {
+    max-width: 500px; /* Set the maximum width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    float: right;
+    margin-right:calc(5% - 10px);
+    margin-top: -550px;
+}
+.one {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 700px;
+    height: 180px;
+    margin-top: 60px;
+    margin-left: 5%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding: 1px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.product1,
+    .product2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 800px; /* Set the maximum width of the container */
+        margin: 0 auto; /* Center the container */
+    }
+
+    /* Style for each box */
+    .box,
+    .box1 {
+        flex: 0 0 48%; /* Set the width of each box to 48% */
+        margin-bottom: 10px; /* Add some space between the boxes */
+    }
+
+    /* Style for images inside the boxes */
+    img {
+        width: 700px; /* Make sure images don't exceed the box width */
+        height: 400px; /* Maintain aspect ratio of images */
+        display: block; /* Remove any default inline spacing */
+        margin: 0 auto; /* Center the images horizontally */
+    }
+    .product1 {
+        float: left; /* Float product1 to the left */
+        width: 48%; /* Set the width of product1 */
+    }
+    
+    .product2 {
+        float: right; /* Float product2 to the right */
+        width: 48%; /* Set the width of product2 */
+    }
+    
+    /* Clearfix to contain floats */
+    .container::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .product1 p {
+        margin-top: 10px; /* Add some space above the paragraph */
+        text-align: center; /* Center align the paragraph */
+    }
+    .product2 p {
+        margin-top: 10px; /* Add some space above the paragraph */
+        text-align: center; /* Center align the paragraph */
+    }
+    .footer-content {
+      margin-top: 200px;
+      background-color: #333;
+      position: relative;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      width: 100%;
+      display: table;
+      z-index: 100;
+  }
+  
+.footer-content ul {
+  padding: 0;
+  list-style: none;
+}
+  
+.footer-content li {
+  display: inline-block;
+  margin-right: 30px; /* Add some space between items if needed */
+
+}
+.product1 {
+    display: flex;
+    justify-content: space-between;
+    margin-left	: 60px; /* Adjust the margin-right as needed */
+}
+
+.product2 {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px; /* Adjust the margin-right as needed */
+}
+.her {
+    text-align: left;
+    margin-right: 95px; /* Adjust the margin-left as needed */
+}
+
